@@ -45,12 +45,12 @@ col[2] = "#89F5FF"
 case = []
 for i in range(len(solution)):
     if beta_n[i] < 0:
-        case.append('Private')
-    else:
         case.append('Public')
+    else:
+        case.append('Private')
 
 #%% Figure with lags
-lags = [2, 3, 4, 30]
+lags = [1, 2, 3, 30,50]
 fig, ax = plt.subplots(1)
 for j in range(len(lags)):
     l = lags[j]
@@ -60,11 +60,12 @@ for j in range(len(lags)):
             ax.plot(solution[i]['m'][t], solution[i]['c'][t], label = case[i], color = col[abs(1-i)])
     else:
         for i in range(len(solution)):
-            ax.plot(solution[i]['m'][t], solution[i]['c'][t], color = col[abs(1-i)])
+            ax.plot(solution[i]['m'][t], solution[i]['c'][t], color = col[i])
 ax.set_xlim(0, 10)
 ax.set_ylim(0, 5)
 ax.set_xlabel("Cash-in-hand")
 ax.set_ylabel("Consumption")
+ax.grid()
 ax.legend()
 plt.show()
 
