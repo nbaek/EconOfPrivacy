@@ -5,6 +5,8 @@ The code is set in python, but relies for most parts on Matlab code from the sem
 # Files in the folder
 *BufferStockEGM.py* contains code for the solution of a consumption/savings model. 
 
+*BFClass.py* contains the class for parameter values for the model. In order to change the parameters, start here.
+
 *GE_model.py* contains the code for solving the general equilibrium model.
 
 *FigModule.py* contains a local module holding functions for solving and plotting both the consumption/savings model and the General Equilibrium model.
