@@ -339,8 +339,8 @@ hfont = {'fontname':'Helvetica'}
 fig, ax = plt.subplots(1)
 plt.rcParams["font.family"] = "calibri"
 plt.rcParams['font.size'] = 12
-ax.plot(df_lines.K_supply, df_lines.r, '.-', color = col1, label = "K, supply, public")
-ax.plot(df_lines_con.K_supply, df_lines_con.r, '.-', color = col2, label = "K, supply, private")
+ax.plot(df_lines.K_supply, df_lines.r, '.-', color = col1, label = "K, supply, private")
+ax.plot(df_lines_con.K_supply, df_lines_con.r, '.-', color = col2, label = "K, supply, public")
 ax.plot(df_lines.K_demand, df_lines.r, '-', color = col3, label = "K, demand")
 #plt.plot(df_lines_con.K_demand, df_lines_con.r, '--', label = "K, demand, consp.")
 ax.axhline(y = res_eq_con['r'], color = col2, ls = ':')
